@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PhoneSafe — Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="demostyle.css">
+</head>
+<body class="page-dashboard">
+  <header class="topbar card--glass">
+    <div class="top-left">
+      <div class="brand-small">📱 PhoneSafe</div>
+      <div class="search">
+        <input id="searchDevices" placeholder="Search devices..." />
+      </div>
+    </div>
+
+    <div class="top-right">
+      <button id="mapButton" class="btn btn-ghost">Track</button>
+      <button id="controlButton" class="btn btn-ghost">Commands</button>
+      <button id="adminButton" class="btn btn-ghost">Admin</button>
+      <div class="toggle-wrap">
+        <label class="switch">
+          <input id="darkToggle" type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <div class="container grid">
+    <section class="card card--glass col-3">
+      <h3>Live devices</h3>
+      <div id="devicesList" class="devices-list">Loading devices...</div>
+    </section>
+
+    <section class="card card--glass col-2">
+      <h3>Quick actions</h3>
+      <div class="quick-actions">
+        <button id="quickLocate" class="btn full">Locate device</button>
+        <button id="quickLock" class="btn danger full">Lock device</button>
+        <button id="quickWipe" class="btn danger full">Wipe device</button>
+      </div>
+      <hr />
+      <h4>Recent logs</h4>
+      <div id="recentLogs" class="muted small">No logs yet</div>
+    </section>
+
+    <section class="card card--glass col-1">
+      <h3>Device preview</h3>
+      <div id="devicePreview" class="device-preview">
+        Select a device to see details
+      </div>
+    </section>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="demoapp.js" type="module"></script>
+</body>
+</html>

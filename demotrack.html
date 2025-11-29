@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PhoneSafe — Track</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="demostyle.css">
+</head>
+<body class="page-track">
+  <header class="topbar card--glass">
+    <div class="brand-small">📍 Track</div>
+    <div class="top-right">
+      <button onclick="location.href='demodash.html'" class="btn btn-ghost">Dashboard</button>
+      <button onclick="location.href='democontrol.html'" class="btn btn-ghost">Commands</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="map-wrap card--glass">
+      <div id="map" class="map"></div>
+      <div class="map-controls">
+        <select id="deviceSelect"></select>
+        <button id="followBtn" class="btn">Follow</button>
+        <button id="centerBtn" class="btn">Center</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <!-- Google Maps JS: replace key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+  <script src="demoapp.js" type="module"></script>
+</body>
+</html>

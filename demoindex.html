@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PhoneSafe — Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="demostyle.css">
+</head>
+<body class="page-login">
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="loader">
+      <svg viewBox="0 0 100 100" class="loader-svg">
+        <circle cx="50" cy="50" r="40"></circle>
+      </svg>
+    </div>
+    <div class="loader-text">PhoneSafe</div>
+  </div>
+
+  <main class="auth-wrap">
+    <div class="auth-card card--glass">
+      <div class="brand">
+        <div class="logo">📱</div>
+        <h1>PhoneSafe</h1>
+        <p class="muted">Remote locate • lock • wipe</p>
+      </div>
+
+      <form id="loginForm" class="form">
+        <div class="field">
+          <label>Email</label>
+          <input id="loginEmail" type="email" required />
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input id="loginPassword" type="password" required />
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Log in</button>
+          <a class="link" href="demosignup.html">Create account</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="demoapp.js" type="module"></script>
+</body>
+</html>

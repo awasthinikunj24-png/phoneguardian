@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PhoneSafe — Control</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="demostyle.css">
+</head>
+<body class="page-control">
+  <header class="topbar card--glass">
+    <div class="brand-small">⚙ Control</div>
+    <div class="top-right">
+      <button onclick="location.href='demodash.html'" class="btn btn-ghost">Dashboard</button>
+      <button onclick="location.href='demotrack.html'" class="btn btn-ghost">Track</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card card--glass">
+      <h3>Choose device</h3>
+      <select id="controlDevice"></select>
+
+      <div class="spaced">
+        <button id="cmdLocate" class="btn full">Request Location</button>
+        <button id="cmdLock" class="btn full">Lock Device</button>
+        <button id="cmdAlarm" class="btn full">Play Alarm</button>
+        <button id="cmdWipe" class="btn danger full">Factory Wipe</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Confirm modal (used for Wipe) -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <h3>Confirm wipe</h3>
+      <p>This will factory reset the device. This action is irreversible.</p>
+      <div class="modal-actions">
+        <button id="modalCancel" class="btn">Cancel</button>
+        <button id="modalConfirm" class="btn danger">Confirm wipe</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="demoapp.js" type="module"></script>
+</body>
+</html>

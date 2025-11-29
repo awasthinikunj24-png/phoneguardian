@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PhoneSafe — Sign up</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="demostyle.css">
+</head>
+<body class="page-signup">
+  <main class="auth-wrap">
+    <div class="auth-card card--glass">
+      <div class="brand">
+        <div class="logo">📱</div>
+        <h1>Create account</h1>
+        <p class="muted">Start protecting your phone now</p>
+      </div>
+
+      <form id="signupForm" class="form">
+        <div class="field">
+          <label>Full name</label>
+          <input id="signupName" type="text" required />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input id="signupEmail" type="email" required />
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input id="signupPassword" type="password" minlength="6" required />
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Create account</button>
+          <a class="link" href="demoindex.html">Back to login</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script src="demoapp.js" type="module"></script>
+</body>
+</html>
